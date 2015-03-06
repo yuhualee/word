@@ -95,6 +95,17 @@
 ## git 命令
 
 * git log 查看日志
+
+	```
+	git log
+	```
+	> 查看版本
+	
+	```
+	git log --pretty=oneline
+	```
+	> 简化信息，只输出版本号和变化的内容
+
 * git status 查看文件变化
 * git diff 可以查看修改的内容
 		
