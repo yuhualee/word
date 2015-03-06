@@ -38,6 +38,8 @@
 		
 	* 在Windows上安装git (省略...)
 	
+## 使用git
+	
 	
 * 配置git（本地mac开发环境ssh连接git）
 
@@ -74,6 +76,25 @@
 	git remote add origin git@github.com:yuhualee/yourRepo.git
 	```
 	> yourRepo.git 要替换成你自己的
-
 	
+* 初始化一个仓库
+
+	```
+	git init
+	```
+
+
+* 提交，上传
+
+	```
+	git status  //查看文件变化
+	git add ./  //提交文件
+	git commit -m "updata"   //提交
+	```	
+	
+## git 命令
+
+* git log 查看日志
+* git status 查看文件变化
+* git diff 可以查看修改的内容
 		
