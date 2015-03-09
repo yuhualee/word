@@ -95,6 +95,36 @@
 ## git 命令
 
 * git log 查看日志
+
+	```
+	git log
+	```
+	
+	```
+	git log --pretty=oneline
+	```
+
+
+* 版本回退
+
+	```
+	git reset --hard HEAD^
+	```
+	
+	> HEAD^  几个^就代表几个版本，也可以用版本号
+	
+* 添加到暂存区
+
+	```
+	git add
+	```
+* 版本对比
+
+	```
+	git diff HEAD -- readme.txt
+	```
+
+
 * git status 查看文件变化
 * git diff 可以查看修改的内容
 		
