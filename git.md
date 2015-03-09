@@ -99,10 +99,15 @@
 	```
 	git log
 	```
+<<<<<<< HEAD
+=======
+	> 查看版本
+>>>>>>> 24085da58f6981f6d0179fd7a56fcf701b8fba8c
 	
 	```
 	git log --pretty=oneline
 	```
+<<<<<<< HEAD
 
 
 * 版本回退
@@ -124,6 +129,9 @@
 	git diff HEAD -- readme.txt
 	```
 
+=======
+	> 简化信息，只输出版本号和变化的内容
+>>>>>>> 24085da58f6981f6d0179fd7a56fcf701b8fba8c
 
 * git status 查看文件变化
 * git diff 可以查看修改的内容
