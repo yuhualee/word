@@ -400,11 +400,57 @@
 
 ## 使用github
 
-* 
-            
+* git全局设置
+
+	```
+	git config --global user.name "your name"
+	git config --global user.email youremail@email.com
+	```
+	
+* 将git项目与github建立联系
+
+	```
+	mkdir yourgithubproject  //创建文件夹
+	cd yourgithubproject   //进入文件夹
+	git init   //在本地工作目录中初始化一个新仓库
+	touch README  //
+	git add README  //添加
+	git commit -m "注释"   //提交
+	git remote add origin  git@github.com:yourgithubname/yourgithubproject.git   //首次关联的时候用，以后就不用了	git push origin master
+	```
+
+* 导入现有的git仓库
+
+	```
+	cd existing_git_project
+	git remote add origin git@github.com:yourgithubname/yourgithubproject.git
+	git push origin master
+	```
+	
+* 克隆一个仓库
+
+	```
+	git clone git@github.com:yuhualee/css.git
+	```
+
+	
+* 第一次提交
+
+ ```
+ git push yourgitproject master
+ ```
+ 
+* 日常提交
+
+	```
+	git add .
+	git commit -a -m "info"
+	git push
+	```
+      
 
 
-## aaa
+## 命令参数
 
 * -a 指定标签名
 * -m 指定说明文字
