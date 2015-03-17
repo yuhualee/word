@@ -59,7 +59,7 @@
 * **安装 node 插件**
 
 	```
-	node install
+	npm install
 	```
 
 	

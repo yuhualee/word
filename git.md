@@ -68,6 +68,15 @@
 		ssh -T git@github.com
 		```
 
+### 
+
+* 在本地工作目录中初始化一个新仓库
+
+	```
+	git init
+	```
+
+
 * 设置用户username和email：
 
 	```
@@ -82,12 +91,6 @@
 	```
 	> yourRepo.git 要替换成你自己的
 	
-* 初始化一个仓库
-
-	```
-	git init
-	```
-
 
 * 提交，上传
 
@@ -368,10 +371,45 @@
 	
 	```
 	git log --pretty=oneline --abbrev-commit    //查看log
-	git tag v0.9 <commit id>	
+	git tag v0.9 <commit id>	  //添加标签，指定commit id
+	git show <tagname>    //查看标签信息
 	```
+	
+	还可以创建有说明的标签
+	
+	```
+	git tag -a <tagname> -m "version info" <commit id>   //-a指定标签名，-m指定说明文字
+	```
+	
 
 * 操作标签
+
+	```
+	git tag -d v1.0   //删除本地标签
+	git push origin <tagname>  //推送指定的标签到服务器
+	git push origin --tags  //推送全部标签
+	```
+	
+	如果标签已提交，要删除远程标签就麻烦一点，先从本地删除
+	
+	```
+	git tag -d <tagname>   //本地删除
+	git push origin :refs/tags/<tagname>    //远程删除
+	```
+
+
+## 使用github
+
+* 
+            
+
+
+## aaa
+
+* -a 指定标签名
+* -m 指定说明文字
+* -s 用私钥签名一个标签
+
 
 
 
