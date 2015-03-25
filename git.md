@@ -424,7 +424,7 @@
 	```
 	cd existing_git_project
 	git remote add origin git@github.com:yourgithubname/yourgithubproject.git
-	git push origin master
+	git push -u origin master
 	```
 	
 * 克隆一个仓库
