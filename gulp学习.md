@@ -8,6 +8,17 @@
 	```
 	> 上述指令将gulp安装到本地端的专案内，并纪录于package.json内的devDependencies物件。请确保目录里面含有package.json。
 
+	* **gulp命令**
+	
+		```
+		gulp.task(name[, deps], fn);  //定义任务 name: 任务名称， deps：依赖任务名称   fn: 回调函数
+		gulp.run(tasks...); //尽可能多的并行执行多个task
+		gulp.watch(glob,fn);  //当glob内容发生改变时，执行fn
+		gulp.src(glob);    //置需要处理的文件的路径，可以是多个文件以数组的形式，也可以是正则
+		gulp.dest(path[,options]);   //设置生成文件的路径
+		```
+		> gulp将要处理的文件通过管道(pipe())API导向相关插件，通过插件执行文件的处理任务。
+	
 	* 安装外挂
 	
 		* 编译Sass (gulp-ruby-sass)
@@ -21,6 +32,7 @@
 		* 清理档案 (gulp-clean)
 		* 图片快取，只有更改过得图片会进行压缩 (gulp-cache)
 		* 更动通知 (gulp-notify)
+		* 自动加载package.json里面的所有gulp插件  (gulp-load-plugins)
 		
 			```
 			npm install gulp-ruby-sass
@@ -41,6 +53,24 @@
 		    notify = require('gulp-notify'),
     		cache = require('gulp-cache'),
 		    livereload = require('gulp-livereload');
+		```
+		
+		**gulp-load-plugins** - 从package.json里加载所有依赖的gulp插件
+		
+		```
+		npm install --save-dev gulp-load-plugins
+		```
+		
+		```
+		var gulp = require('gulp');
+		var gulpLoadPlugins = require('gulp-load-plugins');
+		var plugins = gulpLoadPlugins();
+		```
+		相当于如下结果：
+		
+		```
+		plugins.jshint = require('gulp-jshint');
+		plugins.concat = require('gulp-concat');
 		```
 		
 	* 建立任务
@@ -132,6 +162,15 @@
 
 
 
+* **gulp-uglify**
+
+	```
+	gulp.task('compress',function(){
+		return gulp.src('app/scripts/*.js')
+		.pipe(uglify())
+		.pipe(gulp.dest('dist'))
+	});	
+	```
 
 
 
