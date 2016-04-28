@@ -29,3 +29,22 @@
 	```
 	bower uninstall jquery   //卸载
 	```
+	
+#### bower
+
+* **创建bower.json**
+
+	我们可以使用 bower init 创建 bower.json
+
+
+	```
+	bower init
+	```
+* **维护依赖**
+
+	能够将包安装到你的项目中，同时将依赖关系写入到 bower.json 的 dependencies 数组。
+
+
+	```
+	bower install package --save
+	```
